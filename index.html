@@ -1,30 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>My Web Page</title>
-    </head>
-<body>
-    <h1>Welcome to My Web Page</h1>
-    <p>This is my first paragraph</p>
-    </body>
-</html>
-<form action="submit.php" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name"><br><br>
-        <label for="age">Age:</label>
-        <input type="number" id="age" name="age"><br><br>
-        <input type="submit" value="Submit">
-    </form>
-    <form>
-        <label for="gender">Gender:</label>
-        <select id="gender" name="gender">
-            <option value="male"<Male</option>
-                <option value="female">Female</option>
-            </select><br><br>
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="4" cols="30"></textarea><br><br>
-            <button type="submit">Send</button>
-        </label>
-    </form>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Forms and Tables Assessment</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
 
-    
+    form {
+      margin-bottom: 40px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input, select {
+      padding: 5px;
+      margin-top: 5px;
+      width: 250px;
+    }
+
+    .form-section {
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+
+    thead {
+      background-color: #f2f2f2;
+    }
+
+    tfoot {
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>User Registration</h1>
+
+  <form method="post" action="#">
+    <div class="form-section">
+      <label for="fullname">Full Name *</label>
+      <input type="text" id="fullname" name="fullname" placeholder="e.g., Jane Doe" required>
+    </div>
+
+    <div class="form-section">
+      <label for="email">Email Address *</label>
+      <input type="email" id="email" name="email" placeholder="e.g., jane@example.com" required>
+    </div>
+
+    <div class="form-section">
+      <label for="dob">Date of Birth *</label>
+      <input type="date" id="dob" name="dob" required>
+    </div>
+
+    <fieldset class="form-section">
+      <legend>Gender *</legend>
+      <input type="radio" id="male" name="gender" value="Male" required>
+      <label for="male" style="display:inline;">Male</label>
+      <input type="radio" id="female" name="gender" value="Female">
+      <label for="female" style="display:inline;">Female</label>
+      <input type="radio" id="other" name="gender" value="Other">
+      <label for="other" style="display:inline;">Other</label>
+    </fieldset>
+
+    <div class="form-section">
+      <label for="country">Country *</label>
+      <select id="country" name="country" required>
+        <option value="">--Select--</option>
+        <option value="USA">USA</option>
+        <option value="Canada">Canada</option>
+        <option value="Germany">Germany</option>
+        <option value="India">India</option>
+        <option value="Australia">Australia</option>
+      </select>
+    </div>
+
+    <fieldset class="form-section">
+      <legend>Hobbies *</legend>
+      <input type="checkbox" id="reading" name="hobbies[]" value="Reading">
+      <label for="reading" style="display:inline;">Reading</label>
+      <input type="checkbox" id="sports" name="hobbies[]" value="Sports">
+      <label for="sports" style="display:inline;">Sports</label>
+      <input type="checkbox" id="music" name="hobbies[]" value="Music">
+      <label for="music" style="display:inline;">Music</label>
+    </fieldset>
+
+    <div class="form-section">
+      <label for="password">Password *</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <h2>Sample Users</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Country</th>
+        <th>Hobbies</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="5">Total Users: 5</td>
+      </tr>
+    </tfoot>
+  </table>
+
+</body>
+</html>
+
+
